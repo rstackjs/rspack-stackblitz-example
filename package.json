@@ -10,8 +10,8 @@
   "dependencies": {
     "@rspack/cli": "^1.7.11",
     "@rspack/core": "^1.7.11",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@rspack/plugin-react-refresh": "^2.0.0",
