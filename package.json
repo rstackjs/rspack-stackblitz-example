@@ -14,7 +14,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@rspack/plugin-react-refresh": "^1.6.1",
+    "@rspack/plugin-react-refresh": "^2.0.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "react-refresh": "^0.18.0"
