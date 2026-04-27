@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@rspack/cli':
         specifier: ^2.0.0
-        version: 2.0.0(@rspack/core@2.0.0(@swc/helpers@0.5.17))
+        version: 2.0.0(@rspack/core@2.0.0(@swc/helpers@0.5.17))(@rspack/dev-server@2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17)))
       '@rspack/core':
         specifier: ^2.0.0
         version: 2.0.0(@swc/helpers@0.5.17)
@@ -21,6 +21,9 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      '@rspack/dev-server':
+        specifier: ^2.0.1
+        version: 2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17))
       '@rspack/plugin-react-refresh':
         specifier: ^2.0.0
         version: 2.0.0(@rspack/core@2.0.0(@swc/helpers@0.5.17))(react-refresh@0.18.0)
@@ -127,6 +130,25 @@ packages:
       '@module-federation/runtime-tools':
         optional: true
       '@swc/helpers':
+        optional: true
+
+  '@rspack/dev-middleware@2.0.1':
+    resolution: {integrity: sha512-cXSubf5/C+dvkWV2/+rGTtiZ93wSLd3OlTQhwMvsmsmGDdPlkYqIvQ+BTkOk9UCXxKIaF0DDYYmCpBeRRYJfJw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@rspack/core': ^2.0.0-0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+
+  '@rspack/dev-server@2.0.1':
+    resolution: {integrity: sha512-N5sIdU9v6WhwPH6Ek8QCj4IMvGd8jA3ZW1NMAyHP1ezzKIr2/idcNV2zX5vbC6FJvOLRLww0rFjfKA+z4tshDA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@rspack/core': ^2.0.0-0
+      selfsigned: ^5.0.0
+    peerDependenciesMeta:
+      selfsigned:
         optional: true
 
   '@rspack/plugin-react-refresh@2.0.0':
@@ -246,15 +268,26 @@ snapshots:
       '@rspack/binding-win32-ia32-msvc': 2.0.0
       '@rspack/binding-win32-x64-msvc': 2.0.0
 
-  '@rspack/cli@2.0.0(@rspack/core@2.0.0(@swc/helpers@0.5.17))':
+  '@rspack/cli@2.0.0(@rspack/core@2.0.0(@swc/helpers@0.5.17))(@rspack/dev-server@2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17)))':
     dependencies:
       '@rspack/core': 2.0.0(@swc/helpers@0.5.17)
+    optionalDependencies:
+      '@rspack/dev-server': 2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17))
 
   '@rspack/core@2.0.0(@swc/helpers@0.5.17)':
     dependencies:
       '@rspack/binding': 2.0.0
     optionalDependencies:
       '@swc/helpers': 0.5.17
+
+  '@rspack/dev-middleware@2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17))':
+    optionalDependencies:
+      '@rspack/core': 2.0.0(@swc/helpers@0.5.17)
+
+  '@rspack/dev-server@2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17))':
+    dependencies:
+      '@rspack/core': 2.0.0(@swc/helpers@0.5.17)
+      '@rspack/dev-middleware': 2.0.1(@rspack/core@2.0.0(@swc/helpers@0.5.17))
 
   '@rspack/plugin-react-refresh@2.0.0(@rspack/core@2.0.0(@swc/helpers@0.5.17))(react-refresh@0.18.0)':
     dependencies:
