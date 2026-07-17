@@ -8,8 +8,8 @@
     "preview": "rspack preview"
   },
   "dependencies": {
-    "@rspack/cli": "^2.0.8",
-    "@rspack/core": "^2.0.8",
+    "@rspack/cli": "^2.1.4",
+    "@rspack/core": "^2.1.4",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
